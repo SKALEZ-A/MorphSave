@@ -44,3 +44,4 @@ const FormField: React.FC<FormFieldProps> = ({
 };
 
 export { FormField };
+export default FormField;

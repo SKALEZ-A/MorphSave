@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Github, Twitter, Discord, Mail } from 'lucide-react';
+import { Github, Twitter, Mail, MessageCircle } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { name: 'GitHub', href: 'https://github.com/morphsave', icon: Github },
     { name: 'Twitter', href: 'https://twitter.com/morphsave', icon: Twitter },
-    { name: 'Discord', href: 'https://discord.gg/morphsave', icon: Discord },
+    { name: 'Discord', href: 'https://discord.gg/morphsave', icon: MessageCircle },
     { name: 'Email', href: 'mailto:hello@morphsave.com', icon: Mail },
   ];
 
@@ -190,3 +190,4 @@ const Footer: React.FC = () => {
 };
 
 export { Footer };
+export default Footer;

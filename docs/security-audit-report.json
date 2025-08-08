@@ -1,0 +1,597 @@
+{
+  "timestamp": "2025-08-07T00:30:14.485Z",
+  "summary": {
+    "totalIssues": 79,
+    "critical": 2,
+    "high": 2,
+    "medium": 15,
+    "low": 60,
+    "info": 0
+  },
+  "issues": [
+    {
+      "severity": "low",
+      "category": "Gas Optimization",
+      "file": "contracts/SavingsVault.sol",
+      "description": "Potential gas optimization opportunity in loops",
+      "recommendation": "Cache storage variables in memory within loops"
+    },
+    {
+      "severity": "low",
+      "category": "Gas Optimization",
+      "file": "contracts/GameEngine.sol",
+      "description": "Potential gas optimization opportunity in loops",
+      "recommendation": "Cache storage variables in memory within loops"
+    },
+    {
+      "severity": "low",
+      "category": "Gas Optimization",
+      "file": "contracts/YieldManager.sol",
+      "description": "Potential gas optimization opportunity in loops",
+      "recommendation": "Cache storage variables in memory within loops"
+    },
+    {
+      "severity": "medium",
+      "category": "Code Quality",
+      "file": "TypeScript",
+      "description": "TypeScript compilation errors detected",
+      "recommendation": "Fix TypeScript errors before deployment"
+    },
+    {
+      "severity": "critical",
+      "category": "Authentication Security",
+      "file": "src/app/api/auth/login/route.ts",
+      "description": "Plain text password handling detected",
+      "recommendation": "Implement proper password hashing with bcrypt"
+    },
+    {
+      "severity": "critical",
+      "category": "Authentication Security",
+      "file": "src/app/api/auth/register/route.ts",
+      "description": "Plain text password handling detected",
+      "recommendation": "Implement proper password hashing with bcrypt"
+    },
+    {
+      "severity": "medium",
+      "category": "Input Validation",
+      "file": "src/app/api/insights/anomalies/route.ts",
+      "description": "API endpoint without input validation detected",
+      "recommendation": "Implement input validation and sanitization"
+    },
+    {
+      "severity": "medium",
+      "category": "Input Validation",
+      "file": "src/app/api/test/simulate-budget-alert/route.ts",
+      "description": "API endpoint without input validation detected",
+      "recommendation": "Implement input validation and sanitization"
+    },
+    {
+      "severity": "medium",
+      "category": "Input Validation",
+      "file": "src/app/api/test/simulate-transaction/route.ts",
+      "description": "API endpoint without input validation detected",
+      "recommendation": "Implement input validation and sanitization"
+    },
+    {
+      "severity": "medium",
+      "category": "Input Validation",
+      "file": "src/app/api/test/simulate-anomaly/route.ts",
+      "description": "API endpoint without input validation detected",
+      "recommendation": "Implement input validation and sanitization"
+    },
+    {
+      "severity": "medium",
+      "category": "Input Validation",
+      "file": "src/app/api/auth/register/route.ts",
+      "description": "API endpoint without input validation detected",
+      "recommendation": "Implement input validation and sanitization"
+    },
+    {
+      "severity": "medium",
+      "category": "Input Validation",
+      "file": "src/app/api/auth/login/route.ts",
+      "description": "API endpoint without input validation detected",
+      "recommendation": "Implement input validation and sanitization"
+    },
+    {
+      "severity": "medium",
+      "category": "Input Validation",
+      "file": "src/app/api/social/challenges/[challengeId]/progress/route.ts",
+      "description": "API endpoint without input validation detected",
+      "recommendation": "Implement input validation and sanitization"
+    },
+    {
+      "severity": "medium",
+      "category": "Input Validation",
+      "file": "src/app/api/social/challenges/route.ts",
+      "description": "API endpoint without input validation detected",
+      "recommendation": "Implement input validation and sanitization"
+    },
+    {
+      "severity": "medium",
+      "category": "Input Validation",
+      "file": "src/app/api/social/invite/route.ts",
+      "description": "API endpoint without input validation detected",
+      "recommendation": "Implement input validation and sanitization"
+    },
+    {
+      "severity": "medium",
+      "category": "Input Validation",
+      "file": "src/app/api/social/friend-requests/route.ts",
+      "description": "API endpoint without input validation detected",
+      "recommendation": "Implement input validation and sanitization"
+    },
+    {
+      "severity": "high",
+      "category": "Data Encryption",
+      "file": "lib/db/notifications.ts",
+      "description": "Sensitive data without encryption detected",
+      "recommendation": "Encrypt sensitive data before storage"
+    },
+    {
+      "severity": "high",
+      "category": "Data Encryption",
+      "file": "lib/db/user.ts",
+      "description": "Sensitive data without encryption detected",
+      "recommendation": "Encrypt sensitive data before storage"
+    },
+    {
+      "severity": "medium",
+      "category": "Rate Limiting",
+      "file": "lib/security/RateLimiter.ts",
+      "description": "Rate limiting implementation may be insufficient",
+      "recommendation": "Implement comprehensive rate limiting for all API endpoints"
+    },
+    {
+      "severity": "medium",
+      "category": "Environment Security",
+      "file": ".env.example",
+      "description": "Weak default value for PLAID_SECRET",
+      "recommendation": "Use strong, randomly generated secrets in production"
+    },
+    {
+      "severity": "medium",
+      "category": "Environment Security",
+      "file": ".env.example",
+      "description": "Weak default value for JWT_SECRET",
+      "recommendation": "Use strong, randomly generated secrets in production"
+    },
+    {
+      "severity": "medium",
+      "category": "Environment Security",
+      "file": ".env.example",
+      "description": "Weak default value for NEXTAUTH_SECRET",
+      "recommendation": "Use strong, randomly generated secrets in production"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/metrics/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/insights/analysis/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/insights/anomalies/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/insights/projections/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/insights/recommendations/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/savings/deposit/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/savings/transactions/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/savings/summary/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/savings/roundup/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/test/simulate-budget-alert/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/test/simulate-transaction/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/test/simulate-anomaly/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/achievements/leaderboard/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/achievements/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/security/metrics/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/security/alerts/[alertId]/resolve/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/security/alerts/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/auth/logout/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/auth/register/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/auth/me/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/auth/login/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/health/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/challenges/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/challenges/route.ts",
+      "description": "API endpoint without proper error handling",
+      "recommendation": "Implement comprehensive error handling"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/admin/demo/update-leaderboards/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/admin/demo/reset/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/admin/demo/simulate-transactions/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/admin/demo/create-demo-data/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/admin/demo/trigger-achievements/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/admin/demo/generate-insights/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/admin/stats/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/admin/analytics/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/social/challenges/[challengeId]/join/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/social/challenges/[challengeId]/progress/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/social/challenges/[challengeId]/leave/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/social/challenges/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/social/search/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/social/invite/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/social/friend-requests/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/social/friend-requests/[requestId]/accept/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/social/friend-requests/[requestId]/decline/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/social/friends/[friendId]/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/social/friends/[friendId]/block/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/social/friends/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/users/search/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/users/profile/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/users/stats/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/monitoring/errors/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/monitoring/performance/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/notifications/preferences/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/notifications/read-all/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/notifications/push/unsubscribe/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/notifications/push/subscribe/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/notifications/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/notifications/[notificationId]/read/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/analytics/metrics/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    },
+    {
+      "severity": "low",
+      "category": "API Security",
+      "file": "src/app/api/analytics/events/route.ts",
+      "description": "API endpoint without CORS configuration",
+      "recommendation": "Configure appropriate CORS headers"
+    }
+  ],
+  "smartContractAudit": {
+    "contractsAudited": [
+      "SavingsVault.sol",
+      "GameEngine.sol",
+      "YieldManager.sol"
+    ],
+    "vulnerabilities": [],
+    "gasOptimizations": [
+      "Cache storage variables in loops",
+      "Use events for data logging"
+    ]
+  },
+  "dependencyAudit": {
+    "vulnerabilities": [],
+    "outdatedPackages": []
+  },
+  "codeQuality": {
+    "eslintIssues": 1,
+    "typeScriptErrors": 1,
+    "testCoverage": 85
+  },
+  "recommendations": [
+    "Implement comprehensive input validation for all API endpoints",
+    "Ensure all sensitive data is encrypted at rest and in transit",
+    "Regular security audits and penetration testing",
+    "Keep all dependencies updated to latest secure versions",
+    "Implement proper logging and monitoring for security events",
+    "Use environment variables for all configuration secrets",
+    "Implement rate limiting and DDoS protection",
+    "Regular smart contract audits by third-party security firms"
+  ]
+}

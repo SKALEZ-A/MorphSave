@@ -72,7 +72,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 
         {/* Main Content */}
         <main className="flex-1 min-h-[calc(100vh-4rem)]">
-          <div className="container mx-auto px-4 py-6">
+          <div className="container mx-auto px-4 py-6 touch-manipulation">
             {children}
           </div>
           
@@ -85,3 +85,4 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 };
 
 export { MainLayout };
+export default MainLayout;

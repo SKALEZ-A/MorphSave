@@ -133,3 +133,4 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit, loading = false, error 
 };
 
 export { LoginForm };
+export default LoginForm;

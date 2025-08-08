@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: morphsave-api-service
+  namespace: morphsave-production
+  labels:
+    app: morphsave-api
+spec:
+  selector:
+    app: morphsave-api
+  ports:
+  - name: http
+    port: 80
+    targetPort: 3000
+    protocol: TCP
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: morphsave-web-service
+  namespace: morphsave-production
+  labels:
+    app: morphsave-web
+spec:
+  selector:
+    app: morphsave-web
+  ports:
+  - name: http
+    port: 80
+    targetPort: 3000
+    protocol: TCP
+  type: ClusterIP

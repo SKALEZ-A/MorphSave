@@ -270,3 +270,4 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, loading = false, 
 };
 
 export { RegisterForm };
+export default RegisterForm;

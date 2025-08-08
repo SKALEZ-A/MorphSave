@@ -1,0 +1,153 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: morphsave-api
+  namespace: morphsave-production
+  labels:
+    app: morphsave-api
+    version: IMAGE_TAG
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: morphsave-api
+  template:
+    metadata:
+      labels:
+        app: morphsave-api
+        version: IMAGE_TAG
+    spec:
+      containers:
+      - name: morphsave-api
+        image: ghcr.io/morphsave/morphsave:IMAGE_TAG
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - configMapRef:
+            name: morphsave-config
+        - secretRef:
+            name: morphsave-secrets
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /api/health
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /api/health
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          timeoutSeconds: 3
+          failureThreshold: 3
+        volumeMounts:
+        - name: logs
+          mountPath: /var/log/morphsave
+      volumes:
+      - name: logs
+        emptyDir: {}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: morphsave-web
+  namespace: morphsave-production
+  labels:
+    app: morphsave-web
+    version: IMAGE_TAG
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: morphsave-web
+  template:
+    metadata:
+      labels:
+        app: morphsave-web
+        version: IMAGE_TAG
+    spec:
+      containers:
+      - name: morphsave-web
+        image: ghcr.io/morphsave/morphsave:IMAGE_TAG
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - configMapRef:
+            name: morphsave-config
+        - secretRef:
+            name: morphsave-secrets
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "250m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: morphsave-worker
+  namespace: morphsave-production
+  labels:
+    app: morphsave-worker
+    version: IMAGE_TAG
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: morphsave-worker
+  template:
+    metadata:
+      labels:
+        app: morphsave-worker
+        version: IMAGE_TAG
+    spec:
+      containers:
+      - name: morphsave-worker
+        image: ghcr.io/morphsave/morphsave:IMAGE_TAG
+        command: ["npm", "run", "worker"]
+        envFrom:
+        - configMapRef:
+            name: morphsave-config
+        - secretRef:
+            name: morphsave-secrets
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "250m"
